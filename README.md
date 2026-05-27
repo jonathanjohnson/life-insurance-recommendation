@@ -70,6 +70,47 @@ pnpm format         # Prettier write
 pnpm format:check   # Prettier check
 ```
 
+## Database
+
+The schema lives in `supabase/migrations/`. The initial migration
+(`0001_initial_schema.sql`) creates four tables — `leads`, `contractors`,
+`lead_routing_log`, `content_overrides` — and enables row-level security on
+all of them. Service-role writes only, except `content_overrides` which is
+anon-readable so page templates can fetch per-city customizations at request
+time.
+
+### Apply the migration
+
+**Option 1 — Supabase dashboard (no CLI required):**
+
+1. Open the Supabase project in the dashboard.
+2. Navigate to **SQL Editor** → **New query**.
+3. Paste the contents of `supabase/migrations/0001_initial_schema.sql`.
+4. Run. Verify the tables appear under **Table Editor** with RLS enabled.
+
+**Option 2 — Supabase CLI (recommended for repeatable migrations):**
+
+```bash
+# one-time
+pnpm dlx supabase login
+pnpm dlx supabase link --project-ref <your-project-ref>
+
+# apply all pending migrations to the linked remote project
+pnpm dlx supabase db push
+```
+
+### Typed client
+
+- `lib/supabase/client.ts` — `createBrowserClient()` (anon key, client
+  components) and `createServerClient()` (service role, API routes).
+- `lib/supabase/types.ts` — hand-written `Database` type that mirrors the
+  migration. Regenerate with `pnpm dlx supabase gen types typescript
+  --linked > lib/supabase/types.generated.ts` once the project is linked,
+  then swap the import if you'd rather not maintain by hand.
+- `lib/supabase/queries.ts` — typed helpers: `insertLead`,
+  `updateLeadRouting`, `getContractorForZip`, `logRoutingAttempt`,
+  `getContentOverride`.
+
 ## Deployment
 
 Production target is Vercel. Configure the environment variables above in the
@@ -83,6 +124,7 @@ preview deploys are created per PR.
 - [x] Next.js 15 + Tailwind + shadcn/ui scaffolding
 - [x] Folder structure for routes, components, lib, scripts
 - [x] Environment variable template
+- [x] Supabase schema + typed client (leads, contractors, routing log, overrides)
 - [ ] Static data layer: 50 states + ~250 priority cities
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)
