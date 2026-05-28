@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "data:build": "tsx scripts/data-pipeline/run-all.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
@@ -35,11 +36,13 @@
     "@types/node": "^20",
     "@types/react": "^18.3.29",
     "@types/react-dom": "^18.3.7",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "15.5.18",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4",
+    "tsx": "^4.22.3",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"
   }

@@ -111,6 +111,44 @@ pnpm dlx supabase db push
   `updateLeadRouting`, `getContractorForZip`, `logRoutingAttempt`,
   `getContentOverride`.
 
+## Data pipeline
+
+The page templates run against three static JSON files in `lib/data/`:
+`cities.json`, `states.json`, `cities-by-state.json`. They're generated
+offline by the scripts in `scripts/data-pipeline/`:
+
+| Stage | Script | Source |
+| ----- | ------ | ------ |
+| 1 | `fetch-census.ts` | Census ACS 5-year (2022) — median home value, household income, housing units |
+| 2 | `fetch-noaa.ts` | NOAA NCEI 1991–2020 climate normals — temps, precip, days >90°F / <32°F |
+| 3 | `generate-pricing.ts` | Deterministic HVAC pricing from Census + NOAA |
+| 4 | `merge-data.ts` | Joins everything into `lib/data/*.json` |
+
+Each stage maintains its own cache under `scripts/data-pipeline/output/`
+and skips work already done, so reruns are cheap. Pass `--force` to
+recompute everything; `--limit N` for quick smoke tests; `--min-population
+N` to trim the long tail.
+
+### Setup
+
+1. Download the free **US Cities Basic** CSV from
+   [simplemaps.com/data/us-cities](https://simplemaps.com/data/us-cities)
+   and place it at `scripts/data-pipeline/raw/uscities.csv` (gitignored —
+   includes ~30k cities, attribution required per SimpleMaps license).
+2. Get a [Census API key](https://api.census.gov/data/key_signup.html)
+   and a [NOAA NCDC token](https://www.ncdc.noaa.gov/cdo-web/token) and
+   put them in `.env.local`.
+3. Run:
+   ```bash
+   pnpm data:build                                # full pipeline, all cities
+   pnpm data:build -- --min-population 25000      # 1k-ish cities, faster
+   pnpm data:build -- --skip-census --skip-noaa   # offline merge only
+   ```
+
+Outputs are pretty-printed for clean diffs. The generated JSON in
+`lib/data/` is intended to be committed once it reflects real data; the
+intermediate caches in `scripts/data-pipeline/output/` are not.
+
 ## Deployment
 
 Production target is Vercel. Configure the environment variables above in the
@@ -125,7 +163,8 @@ preview deploys are created per PR.
 - [x] Folder structure for routes, components, lib, scripts
 - [x] Environment variable template
 - [x] Supabase schema + typed client (leads, contractors, routing log, overrides)
-- [ ] Static data layer: 50 states + ~250 priority cities
+- [x] Data pipeline scripts (Census + NOAA + pricing → `lib/data/*.json`)
+- [ ] Run pipeline against full SimpleMaps CSV (≥1000 cities, all 50 states)
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)
 - [ ] Core quote form + Turnstile + Supabase persistence
