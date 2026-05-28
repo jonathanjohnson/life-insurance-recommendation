@@ -24,6 +24,7 @@ import {
   buildOrganizationSchema,
   buildServiceSchema,
 } from "@/lib/seo/schema";
+import { buildWebSiteSchema } from "@/lib/seo/structured-data";
 import type { City, State } from "@/lib/data/types";
 import { cn } from "@/lib/utils";
 
@@ -126,6 +127,7 @@ export function CountryPage({ topCities, topStates }: CountryPageProps) {
 
   const schemas = [
     buildOrganizationSchema(),
+    buildWebSiteSchema(),
     buildServiceSchema({
       name: "HVAC contractor matching service",
       areaServed: "United States",

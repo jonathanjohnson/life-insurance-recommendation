@@ -149,6 +149,28 @@ Outputs are pretty-printed for clean diffs. The generated JSON in
 `lib/data/` is intended to be committed once it reflects real data; the
 intermediate caches in `scripts/data-pipeline/output/` are not.
 
+## SEO assets
+
+- `public/og-default.png` (1200×630) is a solid-color placeholder
+  generated at build setup. Replace with a branded image before
+  launch. Referenced from `app/layout.tsx` openGraph/twitter metadata.
+- `/sitemap.xml` is a sitemap index pointing to `/sitemaps/states.xml`,
+  `/sitemaps/cities-1.xml`, `/sitemaps/services.xml`. All three are
+  static (`dynamic = "force-static"`), revalidated daily.
+- `/robots.txt` allows `/`, disallows `/api/`, `/find-pros`, `/404`,
+  `/500`. Sourced from `app/robots.ts`.
+- Optional `GSC_VERIFICATION` env var injects a
+  `google-site-verification` meta tag via root layout metadata.
+
+## Legal pages
+
+`app/{privacy,terms,tcpa-consent,ccpa}/page.tsx` ship as working
+templates. **They are not legal advice.** Have an attorney qualified
+in the operating jurisdictions review and adapt them before public
+launch. The TCPA consent language on `/tcpa-consent` is sourced from
+`lib/lead-routing/tcpa.ts` so the form, this disclosure page, and the
+stored audit record stay byte-identical.
+
 ## Deployment
 
 Production target is Vercel. Configure the environment variables above in the
@@ -170,6 +192,7 @@ preview deploys are created per PR.
 - [x] Dynamic routes: `/`, `/[state]`, `/[state]/[city]` (ISR), 404 + error pages
 - [x] 6-step lead form + Turnstile + partial-save + /find-pros + /api/lead stub
 - [x] /api/lead production handler: zod, rate-limit, Turnstile, spam, Supabase insert, contractor → aggregator routing, GA4 fire
+- [x] Sitemap index + child sitemaps, robots.txt, legal pages (privacy / terms / tcpa-consent / ccpa), OG image placeholder
 - [ ] Run pipeline against full SimpleMaps CSV (≥1000 cities, all 50 states)
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)
