@@ -193,6 +193,8 @@ preview deploys are created per PR.
 - [x] 6-step lead form + Turnstile + partial-save + /find-pros + /api/lead stub
 - [x] /api/lead production handler: zod, rate-limit, Turnstile, spam, Supabase insert, contractor → aggregator routing, GA4 fire
 - [x] Sitemap index + child sitemaps, robots.txt, legal pages (privacy / terms / tcpa-consent / ccpa), OG image placeholder
+- [x] QA checklist + post-launch monitoring docs (`docs/qa-checklist.md`, `docs/post-launch-monitoring.md`)
+- [ ] Vercel deploy + GSC sitemap submission (see `docs/qa-checklist.md` §9)
 - [ ] Run pipeline against full SimpleMaps CSV (≥1000 cities, all 50 states)
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)

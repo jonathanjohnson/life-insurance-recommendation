@@ -16,6 +16,10 @@ import type { Json, LeadInsert } from "@/lib/supabase/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+// Vercel function timeout. Worst-case path: Turnstile 2.5s + insert
+// ~0.2s + contractor POST 2.5s + aggregator POST 2.5s + log writes
+// ~0.4s ≈ 8s. 15s gives headroom for cold starts and network jitter.
+export const maxDuration = 15;
 
 // ---------------------------------------------------------------------------
 // Request schema
