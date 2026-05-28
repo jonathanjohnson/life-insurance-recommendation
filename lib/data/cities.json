@@ -1,1 +1,852 @@
-[]
+[
+  {
+    "slug": "new-york-ny",
+    "citySlug": "new-york-ny",
+    "cityName": "New York",
+    "stateName": "New York",
+    "stateSlug": "new-york",
+    "stateAbbr": "NY",
+    "county": "New York",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "population": 8336817,
+    "density": 0,
+    "zips": [
+      "10001"
+    ],
+    "primary_zip": "10001",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 1
+  },
+  {
+    "slug": "los-angeles-ca",
+    "citySlug": "los-angeles-ca",
+    "cityName": "Los Angeles",
+    "stateName": "California",
+    "stateSlug": "california",
+    "stateAbbr": "CA",
+    "county": "Los Angeles",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "population": 3979576,
+    "density": 0,
+    "zips": [
+      "90001"
+    ],
+    "primary_zip": "90001",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 2
+  },
+  {
+    "slug": "chicago-il",
+    "citySlug": "chicago-il",
+    "cityName": "Chicago",
+    "stateName": "Illinois",
+    "stateSlug": "illinois",
+    "stateAbbr": "IL",
+    "county": "Cook",
+    "lat": 41.8781,
+    "lng": -87.6298,
+    "population": 2693976,
+    "density": 0,
+    "zips": [
+      "60601"
+    ],
+    "primary_zip": "60601",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 3
+  },
+  {
+    "slug": "houston-tx",
+    "citySlug": "houston-tx",
+    "cityName": "Houston",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "Harris",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "population": 2320268,
+    "density": 0,
+    "zips": [
+      "77002"
+    ],
+    "primary_zip": "77002",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 4
+  },
+  {
+    "slug": "phoenix-az",
+    "citySlug": "phoenix-az",
+    "cityName": "Phoenix",
+    "stateName": "Arizona",
+    "stateSlug": "arizona",
+    "stateAbbr": "AZ",
+    "county": "Maricopa",
+    "lat": 33.4484,
+    "lng": -112.074,
+    "population": 1680992,
+    "density": 0,
+    "zips": [
+      "85001"
+    ],
+    "primary_zip": "85001",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 5
+  },
+  {
+    "slug": "philadelphia-pa",
+    "citySlug": "philadelphia-pa",
+    "cityName": "Philadelphia",
+    "stateName": "Pennsylvania",
+    "stateSlug": "pennsylvania",
+    "stateAbbr": "PA",
+    "county": "Philadelphia",
+    "lat": 39.9526,
+    "lng": -75.1652,
+    "population": 1584064,
+    "density": 0,
+    "zips": [
+      "19102"
+    ],
+    "primary_zip": "19102",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 6
+  },
+  {
+    "slug": "san-antonio-tx",
+    "citySlug": "san-antonio-tx",
+    "cityName": "San Antonio",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "Bexar",
+    "lat": 29.4241,
+    "lng": -98.4936,
+    "population": 1547253,
+    "density": 0,
+    "zips": [
+      "78205"
+    ],
+    "primary_zip": "78205",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 7
+  },
+  {
+    "slug": "san-diego-ca",
+    "citySlug": "san-diego-ca",
+    "cityName": "San Diego",
+    "stateName": "California",
+    "stateSlug": "california",
+    "stateAbbr": "CA",
+    "county": "San Diego",
+    "lat": 32.7157,
+    "lng": -117.1611,
+    "population": 1423851,
+    "density": 0,
+    "zips": [
+      "92101"
+    ],
+    "primary_zip": "92101",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 8
+  },
+  {
+    "slug": "dallas-tx",
+    "citySlug": "dallas-tx",
+    "cityName": "Dallas",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "Dallas",
+    "lat": 32.7767,
+    "lng": -96.797,
+    "population": 1343573,
+    "density": 0,
+    "zips": [
+      "75201"
+    ],
+    "primary_zip": "75201",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 9
+  },
+  {
+    "slug": "san-jose-ca",
+    "citySlug": "san-jose-ca",
+    "cityName": "San Jose",
+    "stateName": "California",
+    "stateSlug": "california",
+    "stateAbbr": "CA",
+    "county": "Santa Clara",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "population": 1021795,
+    "density": 0,
+    "zips": [
+      "95110"
+    ],
+    "primary_zip": "95110",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 10
+  },
+  {
+    "slug": "austin-tx",
+    "citySlug": "austin-tx",
+    "cityName": "Austin",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "Travis",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "population": 978908,
+    "density": 0,
+    "zips": [
+      "78701"
+    ],
+    "primary_zip": "78701",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 11
+  },
+  {
+    "slug": "jacksonville-fl",
+    "citySlug": "jacksonville-fl",
+    "cityName": "Jacksonville",
+    "stateName": "Florida",
+    "stateSlug": "florida",
+    "stateAbbr": "FL",
+    "county": "Duval",
+    "lat": 30.3322,
+    "lng": -81.6557,
+    "population": 911507,
+    "density": 0,
+    "zips": [
+      "32202"
+    ],
+    "primary_zip": "32202",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 12
+  },
+  {
+    "slug": "fort-worth-tx",
+    "citySlug": "fort-worth-tx",
+    "cityName": "Fort Worth",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "Tarrant",
+    "lat": 32.7555,
+    "lng": -97.3308,
+    "population": 909585,
+    "density": 0,
+    "zips": [
+      "76102"
+    ],
+    "primary_zip": "76102",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 13
+  },
+  {
+    "slug": "columbus-oh",
+    "citySlug": "columbus-oh",
+    "cityName": "Columbus",
+    "stateName": "Ohio",
+    "stateSlug": "ohio",
+    "stateAbbr": "OH",
+    "county": "Franklin",
+    "lat": 39.9612,
+    "lng": -82.9988,
+    "population": 898553,
+    "density": 0,
+    "zips": [
+      "43215"
+    ],
+    "primary_zip": "43215",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 14
+  },
+  {
+    "slug": "charlotte-nc",
+    "citySlug": "charlotte-nc",
+    "cityName": "Charlotte",
+    "stateName": "North Carolina",
+    "stateSlug": "north-carolina",
+    "stateAbbr": "NC",
+    "county": "Mecklenburg",
+    "lat": 35.2271,
+    "lng": -80.8431,
+    "population": 885708,
+    "density": 0,
+    "zips": [
+      "28202"
+    ],
+    "primary_zip": "28202",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 15
+  },
+  {
+    "slug": "indianapolis-in",
+    "citySlug": "indianapolis-in",
+    "cityName": "Indianapolis",
+    "stateName": "Indiana",
+    "stateSlug": "indiana",
+    "stateAbbr": "IN",
+    "county": "Marion",
+    "lat": 39.7684,
+    "lng": -86.1581,
+    "population": 876384,
+    "density": 0,
+    "zips": [
+      "46204"
+    ],
+    "primary_zip": "46204",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 16
+  },
+  {
+    "slug": "san-francisco-ca",
+    "citySlug": "san-francisco-ca",
+    "cityName": "San Francisco",
+    "stateName": "California",
+    "stateSlug": "california",
+    "stateAbbr": "CA",
+    "county": "San Francisco",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "population": 873965,
+    "density": 0,
+    "zips": [
+      "94102"
+    ],
+    "primary_zip": "94102",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 17
+  },
+  {
+    "slug": "seattle-wa",
+    "citySlug": "seattle-wa",
+    "cityName": "Seattle",
+    "stateName": "Washington",
+    "stateSlug": "washington",
+    "stateAbbr": "WA",
+    "county": "King",
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "population": 753675,
+    "density": 0,
+    "zips": [
+      "98101"
+    ],
+    "primary_zip": "98101",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 18
+  },
+  {
+    "slug": "denver-co",
+    "citySlug": "denver-co",
+    "cityName": "Denver",
+    "stateName": "Colorado",
+    "stateSlug": "colorado",
+    "stateAbbr": "CO",
+    "county": "Denver",
+    "lat": 39.7392,
+    "lng": -104.9903,
+    "population": 727211,
+    "density": 0,
+    "zips": [
+      "80202"
+    ],
+    "primary_zip": "80202",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 19
+  },
+  {
+    "slug": "washington-dc",
+    "citySlug": "washington-dc",
+    "cityName": "Washington",
+    "stateName": "District of Columbia",
+    "stateSlug": "district-of-columbia",
+    "stateAbbr": "DC",
+    "county": "District of Columbia",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "population": 705749,
+    "density": 0,
+    "zips": [
+      "20001"
+    ],
+    "primary_zip": "20001",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 20
+  },
+  {
+    "slug": "nashville-tn",
+    "citySlug": "nashville-tn",
+    "cityName": "Nashville",
+    "stateName": "Tennessee",
+    "stateSlug": "tennessee",
+    "stateAbbr": "TN",
+    "county": "Davidson",
+    "lat": 36.1627,
+    "lng": -86.7816,
+    "population": 670820,
+    "density": 0,
+    "zips": [
+      "37203"
+    ],
+    "primary_zip": "37203",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 21
+  },
+  {
+    "slug": "oklahoma-city-ok",
+    "citySlug": "oklahoma-city-ok",
+    "cityName": "Oklahoma City",
+    "stateName": "Oklahoma",
+    "stateSlug": "oklahoma",
+    "stateAbbr": "OK",
+    "county": "Oklahoma",
+    "lat": 35.4676,
+    "lng": -97.5164,
+    "population": 655057,
+    "density": 0,
+    "zips": [
+      "73102"
+    ],
+    "primary_zip": "73102",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 22
+  },
+  {
+    "slug": "el-paso-tx",
+    "citySlug": "el-paso-tx",
+    "cityName": "El Paso",
+    "stateName": "Texas",
+    "stateSlug": "texas",
+    "stateAbbr": "TX",
+    "county": "El Paso",
+    "lat": 31.7619,
+    "lng": -106.485,
+    "population": 681728,
+    "density": 0,
+    "zips": [
+      "79901"
+    ],
+    "primary_zip": "79901",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 23
+  },
+  {
+    "slug": "boston-ma",
+    "citySlug": "boston-ma",
+    "cityName": "Boston",
+    "stateName": "Massachusetts",
+    "stateSlug": "massachusetts",
+    "stateAbbr": "MA",
+    "county": "Suffolk",
+    "lat": 42.3601,
+    "lng": -71.0589,
+    "population": 692600,
+    "density": 0,
+    "zips": [
+      "02108"
+    ],
+    "primary_zip": "02108",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 24
+  },
+  {
+    "slug": "portland-or",
+    "citySlug": "portland-or",
+    "cityName": "Portland",
+    "stateName": "Oregon",
+    "stateSlug": "oregon",
+    "stateAbbr": "OR",
+    "county": "Multnomah",
+    "lat": 45.5152,
+    "lng": -122.6784,
+    "population": 654741,
+    "density": 0,
+    "zips": [
+      "97204"
+    ],
+    "primary_zip": "97204",
+    "housing": {
+      "medianHomeValue": null,
+      "medianIncome": null,
+      "totalUnits": null
+    },
+    "climate": {
+      "avgHigh": null,
+      "avgLow": null,
+      "annualPrecip": null,
+      "daysOver90": null,
+      "daysUnder32": null,
+      "stationId": null,
+      "stationDistanceMiles": null
+    },
+    "pricing": null,
+    "tier": "A",
+    "rank": 25
+  }
+]

@@ -1,1 +1,61 @@
-{}
+{
+  "new-york": [
+    "new-york-ny"
+  ],
+  "california": [
+    "los-angeles-ca",
+    "san-diego-ca",
+    "san-jose-ca",
+    "san-francisco-ca"
+  ],
+  "illinois": [
+    "chicago-il"
+  ],
+  "texas": [
+    "houston-tx",
+    "san-antonio-tx",
+    "dallas-tx",
+    "austin-tx",
+    "fort-worth-tx",
+    "el-paso-tx"
+  ],
+  "arizona": [
+    "phoenix-az"
+  ],
+  "pennsylvania": [
+    "philadelphia-pa"
+  ],
+  "florida": [
+    "jacksonville-fl"
+  ],
+  "ohio": [
+    "columbus-oh"
+  ],
+  "north-carolina": [
+    "charlotte-nc"
+  ],
+  "indiana": [
+    "indianapolis-in"
+  ],
+  "washington": [
+    "seattle-wa"
+  ],
+  "colorado": [
+    "denver-co"
+  ],
+  "district-of-columbia": [
+    "washington-dc"
+  ],
+  "tennessee": [
+    "nashville-tn"
+  ],
+  "oklahoma": [
+    "oklahoma-city-ok"
+  ],
+  "massachusetts": [
+    "boston-ma"
+  ],
+  "oregon": [
+    "portland-or"
+  ]
+}

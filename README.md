@@ -165,6 +165,7 @@ preview deploys are created per PR.
 - [x] Supabase schema + typed client (leads, contractors, routing log, overrides)
 - [x] Data pipeline scripts (Census + NOAA + pricing → `lib/data/*.json`)
 - [x] Typed data accessors + deterministic content variant rotator
+- [x] Layout chrome: Header, Footer, Breadcrumbs (JSON-LD), SectionContainer, PhoneCTA
 - [ ] Run pipeline against full SimpleMaps CSV (≥1000 cities, all 50 states)
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)
