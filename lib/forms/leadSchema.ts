@@ -43,8 +43,9 @@ export const PROPERTY_TYPES = [
 ] as const;
 export type PropertyType = (typeof PROPERTY_TYPES)[number]["value"];
 
-export const TCPA_CONSENT_TEXT =
-  "By clicking Submit, I agree that the HVAC Pros Network and its partners may contact me at the phone number and email address provided, including via automated technology, prerecorded messages, and SMS text messages, for marketing and service-related purposes, even if my number is on a Do Not Call list. Consent is not a condition of purchase. Message and data rates may apply. I have read the Privacy Policy and Terms of Service. To opt out of texts reply STOP.";
+// Canonical TCPA copy lives next to the server-side audit code; re-export
+// so existing form imports keep working.
+export { TCPA_CONSENT_TEXT } from "@/lib/lead-routing/tcpa";
 
 const enumZ = <T extends readonly { value: string }[]>(opts: T) =>
   z.enum(opts.map((o) => o.value) as [string, ...string[]]);
