@@ -17,6 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { LeadForm } from "@/components/forms/LeadForm";
 import { PhoneCTA } from "@/components/ui/PhoneCTA";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -198,16 +199,29 @@ export function CityPage({ city, state, nearestCities, content }: CityPageProps)
               data-city-slug={city.citySlug}
               data-state-slug={city.stateSlug}
               data-primary-zip={city.primary_zip}
-              className="rounded-lg border border-border bg-muted/30 p-6"
+              className="rounded-lg border border-border bg-background p-5 sm:p-6"
             >
               <p className="text-sm font-semibold tracking-tight">
                 Request a free quote
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                Lead form mounts here. We match within an hour during business
-                days.
+                Six quick questions. A licensed pro will reach out within the
+                hour during business days.
               </p>
-              <div className="mt-4 h-48 rounded-md border border-dashed border-border" />
+              <div className="mt-4">
+                <LeadForm
+                  initialZip={city.primary_zip}
+                  cityContext={{
+                    slug: city.citySlug,
+                    name: city.cityName,
+                  }}
+                  stateContext={{
+                    slug: state.slug,
+                    name: state.name,
+                    abbr: state.abbr,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

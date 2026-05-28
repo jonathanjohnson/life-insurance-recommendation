@@ -90,4 +90,26 @@ export function getTier(city: City): Tier {
   return city.tier;
 }
 
+let zipIndex: Set<string> | null = null;
+function buildZipIndex(): Set<string> {
+  const set = new Set<string>();
+  for (const c of cities) {
+    for (const z of c.zips) set.add(z);
+    if (c.primary_zip) set.add(c.primary_zip);
+  }
+  return set;
+}
+
+/**
+ * True if `zip` is exactly 5 digits AND appears in any city's coverage.
+ * Used as a soft signal (e.g. "we don't service this area yet") rather
+ * than a hard form blocker — the baseline data only ships one ZIP per
+ * city, so most valid 5-digit ZIPs return false until the pipeline runs.
+ */
+export function validateZip(zip: string): boolean {
+  if (!/^\d{5}$/.test(zip)) return false;
+  if (!zipIndex) zipIndex = buildZipIndex();
+  return zipIndex.has(zip);
+}
+
 export type { City, State } from "./types";
