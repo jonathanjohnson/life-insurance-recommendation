@@ -187,6 +187,13 @@ function selectInterpolated(
 // ---------------------------------------------------------------------------
 
 const introVariants: TextVariant[] = [
+  // Fallback for cities without enriched climate/pricing data yet. Uses only
+  // fields that are always populated so every city renders something real.
+  {
+    requires: ["population", "county", "rank"],
+    template:
+      "{city} sits in {state}'s {county} region and ranks #{rank} nationally by population, with {population} residents in the metro. The local HVAC trade handles repair, replacement, and maintenance across both cooling and heating seasons. Equipment lifespan, SEER2 rating, and Manual J load calc shape almost every install decision in this market.",
+  },
   {
     requires: ["avgHigh", "avgLow", "pricingRepairMedian", "population"],
     template:
@@ -235,6 +242,12 @@ const introVariants: TextVariant[] = [
 ];
 
 const whyCityMattersVariants: TextVariant[] = [
+  // Fallback: no enriched-data dependencies.
+  {
+    requires: ["population", "county", "state"],
+    template:
+      "HVAC equipment in {city} earns its keep across the {population} residents in the {county} area. Cooling and heating loads both shift with the seasons, so spring and fall tune-ups are the cheapest way to keep a system in spec. SEER2 ratings drive cooling efficiency, AFUE drives heating efficiency, and a Manual J load calc decides what size system the home actually needs (not what the existing nameplate says). Across the metro, the most common repair calls are weak capacitors, slow refrigerant leaks, and undersized return ducts that drop airflow below the 400 CFM-per-ton target. Catching these on a maintenance visit is far cheaper than catching them on an after-hours emergency call. A licensed tech with EPA 608 certification handles refrigerant; a state-licensed contractor handles permits and warranty registration.",
+  },
   {
     requires: ["daysOver90", "avgHigh", "totalUnits", "pricingRepairMedian"],
     template:
@@ -278,6 +291,12 @@ const whyCityMattersVariants: TextVariant[] = [
 ];
 
 const seasonalityVariants: TextVariant[] = [
+  // Fallback: no enriched-data dependencies.
+  {
+    requires: ["city", "state"],
+    template:
+      "{city} HVAC equipment sees the standard two-season service rhythm: spring tune-ups for cooling, fall tune-ups for heating. Booking outside peak season usually shortens the dispatch window by a week or more and avoids the after-hours surcharge that comes with the first heat wave or hard freeze. A spring visit covers refrigerant pressures, condenser cleaning, capacitor health, and blower amp draw. A fall visit covers combustion-analyzer readings, heat exchanger inspection, gas valve drift, and inducer-motor amp draw. Most equipment manufacturers require documented annual service to keep warranties active, which is a second reason the two-visit cadence pays for itself.",
+  },
   {
     requires: ["daysOver90", "pricingMaintenanceMedian", "pricingRepairMedian"],
     template:
@@ -325,6 +344,13 @@ const faqEntries: FaqEntry[] = [
   {
     id: "when-to-replace",
     variants: [
+      // Fallback (no enriched data required).
+      {
+        requires: ["city"],
+        question: "When does a {city} home need a full HVAC replacement instead of a repair?",
+        answer:
+          "Run the 50% rule: if the repair quote crosses half the cost of a new matched system, replacement usually wins on lifetime cost. A failing compressor on a system older than 12 years is the most common tipping point, especially once R-22 refrigerant is involved. Comparing the recurring small-repair pattern over two seasons against a single install bid usually decides it.",
+      },
       {
         requires: ["pricingInstallMedian", "pricingRepairMedian", "pricingRepairHigh"],
         question: "When does a {city} home need a full HVAC replacement instead of a repair?",
@@ -369,6 +395,12 @@ const faqEntries: FaqEntry[] = [
     id: "seasonal-timing",
     variants: [
       {
+        requires: ["city"],
+        question: "When should HVAC maintenance be scheduled in {city}?",
+        answer:
+          "Twice a year is the industry standard: spring for cooling, fall for heating. Each visit covers refrigerant pressures, capacitor health, blower amp draw, static-pressure measurement, and combustion analysis on the gas side. Booking outside peak season usually shortens the dispatch window by a week or more and avoids after-hours surcharges. Most manufacturers require documented annual service to keep warranties active.",
+      },
+      {
         requires: ["daysOver90", "pricingMaintenanceMedian"],
         question: "When should AC service be scheduled in {city}?",
         answer:
@@ -411,6 +443,12 @@ const faqEntries: FaqEntry[] = [
   {
     id: "costs",
     variants: [
+      {
+        requires: ["city"],
+        question: "What do HVAC services cost in {city}?",
+        answer:
+          "Repairs in {city} commonly run a few hundred dollars for capacitor or contactor swaps, with compressor or evaporator-coil work landing well into the thousands. Maintenance visits sit at the low end, and emergency dispatch carries an after-hours surcharge that is disclosed before the truck rolls. Full installs scale with equipment tier (single-stage vs variable-speed) and whether ductwork needs modification.",
+      },
       {
         requires: ["pricingRepairLow", "pricingRepairMedian", "pricingRepairHigh"],
         question: "What does an HVAC repair cost in {city}?",
@@ -455,6 +493,12 @@ const faqEntries: FaqEntry[] = [
     id: "equipment-fit",
     variants: [
       {
+        requires: ["city"],
+        question: "What kind of HVAC system fits {city} homes best?",
+        answer:
+          "Variable-speed equipment usually outperforms single-stage on shoulder-season comfort because longer cycles at part load pull more moisture out of the air. Heat pumps with auxiliary heat fit most climates today, including cold-climate models that hold capacity well into the teens. The right answer for any given home depends on the load calc, the envelope, and how much auxiliary heat the design conditions show.",
+      },
+      {
         requires: ["daysOver90", "daysUnder32", "pricingInstallMedian"],
         question: "Is a heat pump a good fit for {city}?",
         answer:
@@ -497,6 +541,12 @@ const faqEntries: FaqEntry[] = [
   {
     id: "contractor-vetting",
     variants: [
+      {
+        requires: ["city"],
+        question: "How should a {city} homeowner vet an HVAC contractor?",
+        answer:
+          "Ask for an EPA 608 certification, current state HVAC license, and proof of liability insurance. A written Manual J load calc and a static-pressure reading should be part of any install bid. Three bids on apples-to-apples scopes (ductwork, line sets, permits, warranty terms) are the standard for a major install, and the lowest number is rarely the right answer once scope differences are accounted for.",
+      },
       {
         requires: ["population", "pricingInstallMedian"],
         question: "How should a {city} homeowner vet an HVAC contractor?",

@@ -167,6 +167,7 @@ preview deploys are created per PR.
 - [x] Typed data accessors + deterministic content variant rotator
 - [x] Layout chrome: Header, Footer, Breadcrumbs (JSON-LD), SectionContainer, PhoneCTA
 - [x] CountryPage, StatePage, CityPage templates + schema builders + SchemaInjector
+- [x] Dynamic routes: `/`, `/[state]`, `/[state]/[city]` (ISR), 404 + error pages
 - [ ] Run pipeline against full SimpleMaps CSV (≥1000 cities, all 50 states)
 - [ ] State page template (`/[state]`)
 - [ ] City page template (`/[state]/[city]`)
